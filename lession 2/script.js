@@ -15,18 +15,33 @@
 
 //  Задание 2 
 
-function handlerDblClick(item) {
-    if (item.name === 'monitoring') {
-    otherFunction('monitoringItem', {
-          type: 'view',
-          item,
-       });
-    } else if (item.name === 'procedure') {
-       otherFunction('procedureItem', {
-          item,
-       });
+// function handlerDblClick(item) {
+//     if (item.name ===  ) {
+//     otherFunction('monitoringItem', {
+//           type: 'view',
+//           item,
+//        });
+//     } else if (item.name === 'procedure') {
+    //    otherFunction('procedureItem', {
+    //       item,
+//        });
+//     }
+//  };
+
+
+
+// тернарный оператор
+
+    function handlerDblClick(item) {
+        item.name === 'monitoring' ?
+            otherFunction('monitoringItem', {
+                type: 'view',
+                item,
+        }) : item.name === 'procedure' ?
+            otherFunction('procedureItem', {
+                item,
+        }) :null;
     }
- };
 
- 
 
+    

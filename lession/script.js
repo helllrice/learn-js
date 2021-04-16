@@ -33,6 +33,6 @@ const regulationStatus = ["В обработке" , "Выполнен" , "Воз
 // 'true' == true = false
 // false == 'false' = false
 // null == '' = false
-// !!"false" == !!"true" = false
+// !!"false" == !!"true" = true
 //[‘x’] == ‘x’ = true
 
