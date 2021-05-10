@@ -2,6 +2,7 @@ let todos = [];
 let todo = document.getElementById('todo');
 let todoView = document.getElementById('todoView');
 
+
 document.getElementById('add').addEventListener('click', function () {
     let id = todos.length + 1;
     todos.push({
@@ -9,6 +10,9 @@ document.getElementById('add').addEventListener('click', function () {
         title: todo.value,
         complete: false
     });
+    let btn = document.createElement('button');
+    btn.textContent = 'удалить';
+    btn.id = 'button';
     let li = document.createElement('li');
     let span = document.createElement('span');
     span.innerText = todo.value;
@@ -25,14 +29,19 @@ document.getElementById('add').addEventListener('click', function () {
             }
         })
     } )
+
+    li.appendChild(btn)
+    li.appendChild(checkbox);
+    li.appendChild(span);
+
+  btn.onclick = function() {
+    
+  }
+
+    todoView.appendChild(li);
+    todos.value = '';   
 })
 
-li.appendChild(checkbox);
-li.appendChild(span);
-
-
-todoView.appendChild(li);
-todos.value = '';
 
 function filterByTitle(param) {
     todos.forEach((item) => {
