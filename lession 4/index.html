@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Списки задач</title>
 </head>
 <body>
+    <form id="formTodo">
+        <label>Название</label>
+        <input type="text"/>
+        <button type="submit">Добавить</button>
+    </form>
+    <ol id="todoView"></ol>
     <div>
-
-        <label>Название</label> <input type="text" id="todo" value=""/>
-        <input type="button" id="add"  value="добавить"/>
-        
-    </div>
-    <div>
-
-        <ol id="todoView"></ol>
-        
+        <button type="button" id="completedBtn" class="btn-complete" data-filter="completed">Завершенные</button>
+        <button type="button" id="notCompletedBtn" class="btn-complete" data-filter="not_completed">Незавершенные</button>
+        <button type="button" id="allCompletedBtn" class="btn-complete"
+        data-filter="all">Все задачи</button>
     </div>
     <script src="script.js"></script>
 </body>
